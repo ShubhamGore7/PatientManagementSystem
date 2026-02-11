@@ -1,0 +1,47 @@
+﻿<Properties StartupConfiguration="{5A37C184-A037-4CC2-B9EC-DB1FF823D425}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="PMS.API/Program.cs">
+    <Files>
+      <File FileName="PMS.API/Program.cs" Line="13" Column="31" />
+      <File FileName="PMS.Domain/Entities/Patient.cs" />
+      <File FileName="PMS.Domain/Entities/PatientInsurance.cs" />
+      <File FileName="PMS.Application/DTOs/RegisterPatientRequest.cs" />
+      <File FileName="PMS.Application/DTOs/InsuranceDto.cs" />
+      <File FileName="PMS.Application/Interfaces/IPatientRepository.cs" />
+      <File FileName="PMS.Application/RegisterPatient/RegisterPatientHandler.cs" />
+      <File FileName="PMS.Infrastructure/Persistence /AppDbContext.cs" />
+      <File FileName="PMS.Infrastructure/Configurations /PatientConfiguration.cs" />
+      <File FileName="PMS.Infrastructure/Repositories/PatientRepository.cs" />
+      <File FileName="PMS.API/Controllers /PatientsController.cs" />
+      <File FileName="PMS.API/appsettings.json" />
+      <File FileName="PMS.API/appsettings.Development.json" />
+      <File FileName="PMS.API/Properties/launchSettings.json" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="PatientManagementSystem" expanded="True" selected="True">
+            <Node name="PMS.API" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="Controllers " expanded="True" />
+            </Node>
+            <Node name="PMS.Infrastructure" expanded="True">
+              <Node name="Configurations " expanded="True" />
+              <Node name="Migrations" expanded="True" />
+              <Node name="Persistence " expanded="True" />
+              <Node name="Repositories" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.PMS.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
+</Properties>

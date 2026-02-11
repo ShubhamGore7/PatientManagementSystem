@@ -1,0 +1,79 @@
+<div class="page">
+  <div class="card">
+    <h2>Patient Registration</h2>
+
+    <form [formGroup]="patientForm" (ngSubmit)="submit()">
+
+      <div class="form-grid">
+        <div class="form-group">
+          <label>First Name</label>
+          <input formControlName="firstName" />
+        </div>
+
+        <div class="form-group">
+          <label>Last Name</label>
+          <input formControlName="lastName" />
+        </div>
+
+        <div class="form-group">
+          <label>Date of Birth</label>
+          <input type="date" formControlName="dateOfBirth" />
+        </div>
+
+        <div class="form-group">
+          <label>Contact Number</label>
+          <input formControlName="contactNumber" />
+        </div>
+      </div>
+
+      <h3>Insurance Details</h3>
+
+      <div formArrayName="insurances">
+        <div
+          class="insurance-row"
+          *ngFor="let insurance of insurances.controls; let i = index"
+          [formGroupName]="i"
+        >
+          <div class="form-group">
+            <label>Policy Number</label>
+            <input formControlName="policyNumber" />
+          </div>
+
+          <div class="form-group">
+            <label>Provider Name</label>
+            <input formControlName="providerName" />
+          </div>
+
+
+
+
+          <label class="checkbox">
+            <input type="checkbox" formControlName="isPrimary" 
+           
+            (change)="onPrimaryChange(i)"
+
+            />
+            Primary
+          </label>
+
+          <button
+            type="button"
+            class="btn danger"
+            (click)="removeInsurance(i)"
+          >
+            Remove
+          </button>
+        </div>
+      </div>
+
+      <button type="button" class="btn secondary" (click)="addInsurance()">
+        + Add Insurance
+      </button>
+
+      <div class="actions">
+        <button type="submit" class="btn primary">Submit</button>
+      </div>
+
+    </form>
+  </div>
+</div>

@@ -1,0 +1,88 @@
+.page {
+  min-height: 100vh;
+  background: #f4f6f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.card {
+  background: #fff;
+  padding: 24px;
+  width: 520px;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+h2 {
+  margin-bottom: 16px;
+}
+
+h3 {
+  margin: 20px 0 10px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+input {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.insurance-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto auto;
+  gap: 8px;
+  align-items: center;
+  background: #f9fafb;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.checkbox {
+  font-size: 13px;
+}
+
+.btn {
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background: #1976d2;
+  color: #fff;
+}
+
+.btn.secondary {
+  background: #e0e0e0;
+  margin-top: 10px;
+}
+
+.btn.danger {
+  background: #e53935;
+  color: #fff;
+}
+
+.actions {
+  text-align: right;
+  margin-top: 20px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 13px;
+  margin-bottom: 4px;
+  color: #555;
+}
