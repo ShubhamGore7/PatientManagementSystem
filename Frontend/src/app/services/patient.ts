@@ -8,7 +8,8 @@ import { Observable } from 'rxjs';
 export class PatientService {
 
   //private apiUrl = 'http://localhost:5070/api/patients/register';
-  private apiUrl ='https://patientmanagementsystem-1.onrender.com/api/patients';
+ private apiUrl ='https://patientmanagementsystem-1.onrender.com/api/patients/register';
+ 
 
 
   constructor(private http: HttpClient) {}
