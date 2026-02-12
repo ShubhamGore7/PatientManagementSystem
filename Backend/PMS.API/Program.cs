@@ -36,6 +36,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddScoped<IPatientRepository, PatientRepository>();
 builder.Services.AddScoped<RegisterPatientHandler>();
+builder.WebHost.UseUrls("http://0.0.0.0:10000");
 
 var app = builder.Build();
 
