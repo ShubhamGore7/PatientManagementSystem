@@ -6,12 +6,15 @@ using PMS.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Services
+// =====================
+// SERVICES
+// =====================
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngular",
@@ -25,34 +28,35 @@ builder.Services.AddCors(options =>
 });
 
 // DbContext
-
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(
         builder.Configuration.GetConnectionString("DefaultConnection")
     )
 );
 
-// DI
-
+// Dependency Injection
 builder.Services.AddScoped<IPatientRepository, PatientRepository>();
 builder.Services.AddScoped<RegisterPatientHandler>();
+
+// IMPORTANT for Render
 builder.WebHost.UseUrls("http://0.0.0.0:10000");
 
 var app = builder.Build();
 
-// Middleware
+// =====================
+// MIDDLEWARE
+// =====================
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+// Enable Swagger in Production
+app.UseSwagger();
+app.UseSwaggerUI();
 
-app.UseHttpsRedirection();
+// Optional: Root endpoint to avoid 404
+app.MapGet("/", () => "Patient Management System API is Running 🚀");
 
+// app.UseHttpsRedirection();  // Disable if causing redirect issues on Render
 
-app.UseCors("AllowAngular");//Cors
-
+app.UseCors("AllowAngular");
 
 app.UseAuthorization();
 
