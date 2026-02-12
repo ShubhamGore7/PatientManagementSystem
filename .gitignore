@@ -1,6 +1,11 @@
-bin/
-obj/
+# Node
+Frontend/node_modules
+Frontend/dist
+Frontend/.angular
+
+# .NET
+**/bin/
+**/obj/
 .vs/
 *.user
 *.suo
-*.DS_Store
